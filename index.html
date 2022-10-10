@@ -5,7 +5,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Roboto&family=Roboto+Serif:opsz,wght@8..144,700&display=swap"
-      rel="stylesheet"/>
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QR Code Menu</title>
@@ -13,11 +14,31 @@
   </head>
   <body>
     <header>
-      <h1>QRCode<span>Menu</span></h1>
-      <p>Aberto todos os dias. 8h - 21h</p>
+      <div class="informations">
+        <h1>QRCode<span>Menu</span></h1>
+        <p>Aberto todos os dias. 8h - 21h</p>
+      </div>
+      <div onclick="openMenu()" class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
     </header>
+      <nav>
+        <ul class="nav-list">
+          <li><a onclick="closeMenu()" href="#brunch">Brunch</a></li>
+          <li><a onclick="closeMenu()" href="#bebidas">Bebidas</a></li>
+          <li><a onclick="closeMenu()" href="#petiscos">Petiscos</a></li>
+        </ul>
+      </nav>
 
-    <section>
+      <!--<img
+          class="avatar"
+          src="https://static.vecteezy.com/ti/vetor-gratis/p3/6038399-logotipo-restaurante-com-colher-e-garfo-icone-conceito-moderno-modelo-de-design-de-logo-restaurante-gr%C3%A1tis-vetor.jpg"
+          alt="Logo do restaurante"
+        />-->
+
+    <section id="brunch" class="options">
       <h2>Brunch</h2>
       <ul>
         <li>
@@ -50,7 +71,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id="bebidas" class="options">
       <h2>Bebidas</h2>
       <ul>
         <li>
@@ -82,5 +103,40 @@
         </li>
       </ul>
     </section>
+
+    <section id="petiscos" class="options">
+      <h2>Petiscos</h2>
+      <ul>
+        <li>
+          <div class="details">
+            <h3>Tábua quente</h3>
+            <p class="description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <strong class="price"> R$37.70 </strong>
+        </li>
+        <li>
+          <div class="details">
+            <h3>Tábua de frios</h3>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <strong class="price"> R$37.70 </strong>
+        </li>
+        <li>
+          <div class="details">
+            <h3>Batata Frita</h3>
+            <p class="description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <strong class="price"> R$17.70 </strong>
+        </li>
+      </ul>
+    </section>
+
+    <script src="mobile-navbar.js"></script>
   </body>
 </html>
